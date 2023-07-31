@@ -1,0 +1,1103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{3efe43d2-b63b-4c5d-8e26-d1e4f37e7c74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{219c8c17-0e61-4f1d-a1be-2151784aa309}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GFX">
+      <UniqueIdentifier>{5df3af5d-67a2-44bc-9e0d-988f7ba9fe20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GFX\DX11">
+      <UniqueIdentifier>{5f59cedc-529b-4747-8f0d-1796d1a9331a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World">
+      <UniqueIdentifier>{c11d544f-93aa-4be6-ac51-cb62fed7032c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{b9c2c154-df54-4ce9-8404-c25d9970d0ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{61babb68-0b81-4d7e-8e2e-ab7c9c91e3b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\Resources">
+      <UniqueIdentifier>{f2a28fcc-c1d3-43dd-b965-9a3f8d422032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{101273a0-81cb-47ae-9cb3-402b86e57fd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Models">
+      <UniqueIdentifier>{159d4438-de7e-4518-8284-ad3385acbb0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor">
+      <UniqueIdentifier>{e5cbc698-3e74-459c-b91b-8e6e47a0ff3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\imgui">
+      <UniqueIdentifier>{0593dd46-552c-4e51-a572-4e28fcd77e32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\imgui\backends">
+      <UniqueIdentifier>{d6a611a5-8263-4bde-a13d-9dd6dfb06a82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{7db46277-52fd-4f6d-8ac0-c63ba00242b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Textures">
+      <UniqueIdentifier>{0fff6ebb-c345-4bd3-8758-8a39c2eda18a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\MeshSystem">
+      <UniqueIdentifier>{cdac264f-6b4c-45a5-8bb7-1f80861c2fae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\MaterialSystem">
+      <UniqueIdentifier>{c5a7be06-cb08-46d9-9ebd-c45359c9c144}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Textures\Skybox">
+      <UniqueIdentifier>{c3fe299a-3843-4848-8af9-f10b7d7ec68b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\PostProcess">
+      <UniqueIdentifier>{c82fac7f-f057-4faa-adfa-636bcb59f812}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Fonts">
+      <UniqueIdentifier>{0acb3ef4-dfcc-41c6-82c4-893c846d22c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Editor">
+      <UniqueIdentifier>{76a29318-6ad9-4442-9d07-bcaae57727c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Models\Knight">
+      <UniqueIdentifier>{ade8b257-e1b3-4738-8da0-7a31d8e70f8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Models\Knight\Textures">
+      <UniqueIdentifier>{605d1e7c-59a2-4e2c-a808-5f942d6d78ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Models\Samurai">
+      <UniqueIdentifier>{17226cf8-d958-4416-b5ba-8c44450e791b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Models\Samurai\Textures">
+      <UniqueIdentifier>{68323a23-7c33-4c27-9424-13f6a14f1521}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\DirectXTex">
+      <UniqueIdentifier>{01065cfe-ad71-4980-8058-b5fa5ff46fae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendor\spdlog">
+      <UniqueIdentifier>{ab95c102-2a80-4940-b759-88b6e14fad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\ParticleSystem">
+      <UniqueIdentifier>{fb4f4fc2-b453-49df-a710-c71d1946d06f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\LightSystem">
+      <UniqueIdentifier>{89a942ea-21b0-470a-85fe-3f541f123a29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\DecalSystem">
+      <UniqueIdentifier>{c3954325-d21a-4a37-9f8d-932272540de8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Utility\Timer.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Window.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Application.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Input.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utility\ParallelExecutor.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\CommonDefinitions.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\WinAPI.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\WinAPIDef.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\WinAPIUndef.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\DX11\D3D11_API.h">
+      <Filter>GFX\DX11</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\DX11\D3D11_Buffer.h">
+      <Filter>GFX\DX11</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\DX11\D3D11_Shader.h">
+      <Filter>GFX\DX11</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\DX11\D3D11_Device.h">
+      <Filter>GFX\DX11</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\Camera.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\CameraController.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utility\Memory.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\DX11\D3D11_Texture.h">
+      <Filter>GFX\DX11</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\DX11\D3D11_Utility.h">
+      <Filter>GFX\DX11</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\FileSystem.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\Scene.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Entry.h" />
+    <ClInclude Include="src\Engi.h" />
+    <ClInclude Include="src\Math\Vec2.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Math\Vec3.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Math\Vec4.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Math\Mat4x4.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Math\Math.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Math\Numeric.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Math\AABB.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\Renderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\GPUDevice.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\GPUBuffer.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\GPUTexture.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\GPUShader.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\GPUResource.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\GPUResourceAllocator.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\GPUSwapchain.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\DX11\D3D11_Swapchain.h">
+      <Filter>GFX\DX11</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\GPUPipelineState.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\DX11\D3D11_PipelineState.h">
+      <Filter>GFX\DX11</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\GPU.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\GPUInputLayout.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\DX11\D3D11_InputLayout.h">
+      <Filter>GFX\DX11</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\ConstantBuffer.h">
+      <Filter>Renderer\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\IndexBuffer.h">
+      <Filter>Renderer\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\imgui\imconfig.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\imgui\imgui.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\imgui\imgui_internal.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\imgui\imstb_rectpack.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\imgui\imstb_textedit.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\imgui\imstb_truetype.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\imgui\backends\imgui_impl_dx11.h">
+      <Filter>Vendor\imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\imgui\backends\imgui_impl_win32.h">
+      <Filter>Vendor\imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\InstanceDragger.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\ImGui.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\DX11\DX11_ImGui.h">
+      <Filter>GFX\DX11</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\Definitions.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\GPUSampler.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\DX11\D3D11_Sampler.h">
+      <Filter>GFX\DX11</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\StaticMeshTriangleOctree.h">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\StaticMesh.h">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\ModelRegistry.h">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\AssimpUtils.h">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\Material.h">
+      <Filter>Renderer\MaterialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\MaterialInstance.h">
+      <Filter>Renderer\MaterialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\ShaderCache.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\StaticMeshInstance.h">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\LongLivedBuffer.h">
+      <Filter>Renderer\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\ImmutableBuffer.h">
+      <Filter>Renderer\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\DynamicBuffer.h">
+      <Filter>Renderer\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\Skybox.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\MaterialRegistry.h">
+      <Filter>Renderer\MaterialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\ShaderProgram.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utility\ArrayView.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\GPUDescriptor.h">
+      <Filter>GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GFX\DX11\D3D11_Descriptor.h">
+      <Filter>GFX\DX11</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\Texture2D.h">
+      <Filter>Renderer\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\TextureCube.h">
+      <Filter>Renderer\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\TextureLibrary.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\PostProcessor.h">
+      <Filter>Renderer\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utility\SolidVector.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\InstanceTable.h">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\Model.h">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\Buffer.h">
+      <Filter>Renderer\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utility\Optional.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\MeshManager.h">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\InstanceData.h">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\Flashlight.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\EventBus.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Event.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\InputEvent.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Keycode.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\WindowEvent.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\CameraManager.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shaders\LightCasters.hlsli">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shaders\HLSL.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Editor\Editor.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Editor\ResourcePanel.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Editor\EditorEvent.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Editor\SceneInspector.h">
+      <Filter>Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\ShaderLibrary.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\ShaderCompiler.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\ModelLoader.h">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\ReflectionCapture.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\DirectXTex\DDSTextureLoader\DDSTextureLoader11.h">
+      <Filter>Vendor\DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\TextureLoader.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\async.h">
+      <Filter>Vendor\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\async_logger.h">
+      <Filter>Vendor\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\async_logger-inl.h">
+      <Filter>Vendor\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\common.h">
+      <Filter>Vendor\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\common-inl.h">
+      <Filter>Vendor\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\logger.h">
+      <Filter>Vendor\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\logger-inl.h">
+      <Filter>Vendor\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\pattern_formatter.h">
+      <Filter>Vendor\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\pattern_formatter-inl.h">
+      <Filter>Vendor\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\spdlog.h">
+      <Filter>Vendor\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\spdlog-inl.h">
+      <Filter>Vendor\spdlog</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Logger.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\imgui\misc\cpp\imgui_stdlib.h">
+      <Filter>Vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\ParticleSystem\ParticleSystem.h">
+      <Filter>World\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utility\Random.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\ModelInstanceRegistry.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\ModelInstance.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\LightSystem\DirectionalLight.h">
+      <Filter>World\LightSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\LightSystem\LightBase.h">
+      <Filter>World\LightSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\LightSystem\LightManager.h">
+      <Filter>World\LightSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\LightSystem\PointLight.h">
+      <Filter>World\LightSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\LightSystem\SpotLight.h">
+      <Filter>World\LightSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\SceneRenderer.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\Sampler.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\DecalSystem\DecalManager.h">
+      <Filter>World\DecalSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\World\DecalSystem\Decal.h">
+      <Filter>World\DecalSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\RenderPass.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Core\Application.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Window.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utility\Timer.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Input.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utility\ParallelExecutor.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GFX\DX11\D3D11_Buffer.cpp">
+      <Filter>GFX\DX11</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GFX\DX11\D3D11_Shader.cpp">
+      <Filter>GFX\DX11</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GFX\DX11\D3D11_Device.cpp">
+      <Filter>GFX\DX11</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\Camera.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\CameraController.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GFX\DX11\D3D11_Texture.cpp">
+      <Filter>GFX\DX11</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GFX\DX11\D3D11_Utility.cpp">
+      <Filter>GFX\DX11</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\FileSystem.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\Scene.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\Renderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GFX\GPUResourceAllocator.cpp">
+      <Filter>GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GFX\DX11\D3D11_Swapchain.cpp">
+      <Filter>GFX\DX11</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GFX\DX11\D3D11_PipelineState.cpp">
+      <Filter>GFX\DX11</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GFX\GPU.cpp">
+      <Filter>GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GFX\DX11\D3D11_InputLayout.cpp">
+      <Filter>GFX\DX11</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\ConstantBuffer.cpp">
+      <Filter>Renderer\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\IndexBuffer.cpp">
+      <Filter>Renderer\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\imgui\imgui.cpp">
+      <Filter>Vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\imgui\imgui_draw.cpp">
+      <Filter>Vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\imgui\imgui_tables.cpp">
+      <Filter>Vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\imgui\imgui_widgets.cpp">
+      <Filter>Vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\imgui\backends\imgui_impl_dx11.cpp">
+      <Filter>Vendor\imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\imgui\backends\imgui_impl_win32.cpp">
+      <Filter>Vendor\imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\InstanceDragger.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GFX\DX11\DX11_ImGui.cpp">
+      <Filter>GFX\DX11</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GFX\DX11\D3D11_Sampler.cpp">
+      <Filter>GFX\DX11</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\StaticMesh.cpp">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\StaticMeshTriangleOctree.cpp">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\Model.cpp">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\ModelRegistry.cpp">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\AssimpUtils.cpp">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\Material.cpp">
+      <Filter>Renderer\MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\ShaderCache.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\MaterialInstance.cpp">
+      <Filter>Renderer\MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\StaticMeshInstance.cpp">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\ImmutableBuffer.cpp">
+      <Filter>Renderer\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\LongLivedBuffer.cpp">
+      <Filter>Renderer\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\DynamicBuffer.cpp">
+      <Filter>Renderer\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\imgui\imgui_demo.cpp">
+      <Filter>Vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\Skybox.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\MaterialRegistry.cpp">
+      <Filter>Renderer\MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\ShaderProgram.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GFX\DX11\D3D11_Descriptor.cpp">
+      <Filter>GFX\DX11</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\Texture2D.cpp">
+      <Filter>Renderer\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\TextureCube.cpp">
+      <Filter>Renderer\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\TextureLibrary.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\PostProcessor.cpp">
+      <Filter>Renderer\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\Buffer.cpp">
+      <Filter>Renderer\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\MeshManager.cpp">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\InstanceData.cpp">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\Flashlight.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\EventBus.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\CameraManager.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Editor\Editor.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Editor\ResourcePanel.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Editor\SceneInspector.cpp">
+      <Filter>Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\ShaderLibrary.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\ShaderCompiler.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\ModelLoader.cpp">
+      <Filter>Renderer\MeshSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\DirectXTex\DDSTextureLoader\DDSTextureLoader11.cpp">
+      <Filter>Vendor\DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\TextureLoader.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Logger.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\ReflectionCapture.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\imgui\misc\cpp\imgui_stdlib.cpp">
+      <Filter>Vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\ParticleSystem\ParticleSystem.cpp">
+      <Filter>World\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utility\Random.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\ModelInstance.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\ModelInstanceRegistry.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\LightSystem\DirectionalLight.cpp">
+      <Filter>World\LightSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\LightSystem\LightManager.cpp">
+      <Filter>World\LightSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\LightSystem\PointLight.cpp">
+      <Filter>World\LightSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\LightSystem\SpotLight.cpp">
+      <Filter>World\LightSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\SceneRenderer.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\Sampler.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\DecalSystem\Decal.cpp">
+      <Filter>World\DecalSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World\DecalSystem\DecalManager.cpp">
+      <Filter>World\DecalSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\RenderPass.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="src\Math\Vec2.inl">
+      <Filter>Math</Filter>
+    </None>
+    <None Include="src\Math\Vec3.inl">
+      <Filter>Math</Filter>
+    </None>
+    <None Include="src\Math\Vec4.inl">
+      <Filter>Math</Filter>
+    </None>
+    <None Include="src\Math\Mat4x4.inl">
+      <Filter>Math</Filter>
+    </None>
+    <None Include="src\Math\Math.inl">
+      <Filter>Math</Filter>
+    </None>
+    <None Include="src\Math\AABB.inl">
+      <Filter>Math</Filter>
+    </None>
+    <None Include="src\Shaders\Postprocessor.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="src\Utility\SolidVector.inl">
+      <Filter>Utility</Filter>
+    </None>
+    <None Include="src\Shaders\Lighting.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="src\Shaders\TextureDefines.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="src\Shaders\Common.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Models\Knight\Knight.fbx">
+      <Filter>Assets\Models\Knight</Filter>
+    </None>
+    <None Include="..\Assets\Models\Samurai\Samurai.fbx">
+      <Filter>Assets\Models\Samurai</Filter>
+    </None>
+    <None Include="src\Shaders\BRDF.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="src\Shaders\IBL.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="src\Shaders\Hologram.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\NormalColor.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\NormalVis.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\AlbedoColor.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\SamplerDefines.hlsli">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\FractalNoise.hlsli">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\BufferDefines.hlsli">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\LayoutDefines.hlsli">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Skybox.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Postprocessor.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Emissive.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\PBR.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\IBL_Diffuse_Precompute.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\IBL_LUT_Precompute.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\IBL_Specular_Precompute.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Depthmap_Texture2D.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Depthmap_TextureCube.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\PBR_Dissolution.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\DebugDrawLine.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\SmokeEmitter.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\GBuffer_Opaque.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\GBuffer_Dissolution.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\GBuffer_Emissive.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\GBuffer_Hologram.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\GBuffer_Decal.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\FXAA.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Fxaa3_11.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\GBuffer_Incineration.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Incineration_Particles.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Assets\Textures\Paint_Chipped_1K_albedo.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Textures\Mip_Level_Vis.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Textures\Skybox\Space_Skybox.dds">
+      <Filter>Assets\Textures\Skybox</Filter>
+    </Image>
+    <Image Include="..\Assets\Textures\Skybox\Interstellar_Skybox.dds">
+      <Filter>Assets\Textures\Skybox</Filter>
+    </Image>
+    <Image Include="..\Assets\Textures\Skybox\lake_beach.dds">
+      <Filter>Assets\Textures\Skybox</Filter>
+    </Image>
+    <Image Include="..\Assets\Textures\Skybox\grass_field.dds">
+      <Filter>Assets\Textures\Skybox</Filter>
+    </Image>
+    <Image Include="..\Assets\Textures\Skybox\mountains.dds">
+      <Filter>Assets\Textures\Skybox</Filter>
+    </Image>
+    <Image Include="..\Assets\Textures\Skybox\night_street.dds">
+      <Filter>Assets\Textures\Skybox</Filter>
+    </Image>
+    <Image Include="..\Assets\Textures\Spotlight_Mask.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Textures\Batlight_Mask.dds">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Cloak_BaseColor.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Cloak_Normal.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Cloak_Roughness.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Eyes_BaseColor.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Eyes_Normal.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Fur_BaseColor.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Fur_Normal.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Fur_Roughness.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Gloves_BaseColor.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Gloves_Metallic.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Gloves_Normal.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Gloves_Roughness.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Head_BaseColor.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Head_Normal.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Head_Roughness.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Helmet_BaseColor.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Helmet_Metallic.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Helmet_Normal.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Helmet_Roughness.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Pants_BaseColor.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Pants_Metallic.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Pants_Normal.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Pants_Roughness.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Skirt_BaseColor.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Skirt_Normal.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Skirt_Roughness.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Torso_BaseColor.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Torso_Metallic.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Torso_Normal.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Knight\Textures\Torso_Roughness.dds">
+      <Filter>Assets\Models\Knight\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Decor_BaseColor.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Eyes_BaseColor.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Hands_BaseColor.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Head_BaseColor.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Helmet_BaseColor.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Pants_BaseColor.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Sword_BaseColor.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Torso_BaseColor.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Decor_Metallic.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Decor_Normal.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Decor_Roughness.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Eyes_Normal.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Hands_Normal.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Hands_Roughness.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Head_Normal.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Head_Roughness.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Helmet_Metallic.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Helmet_Normal.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Helmet_Roughness.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Pants_Metallic.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Pants_Normal.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Pants_Roughness.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Sword_Metallic.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Sword_Normal.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Sword_Roughness.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Torso_Metallic.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Torso_Normal.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Models\Samurai\Textures\Torso_Roughness.dds">
+      <Filter>Assets\Models\Samurai\Textures</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\Assets\Fonts\SometypeMono-Bold.ttf">
+      <Filter>Assets\Fonts</Filter>
+    </Font>
+    <Font Include="..\Assets\Fonts\SometypeMono-BoldItalic.ttf">
+      <Filter>Assets\Fonts</Filter>
+    </Font>
+    <Font Include="..\Assets\Fonts\SometypeMono-Italic.ttf">
+      <Filter>Assets\Fonts</Filter>
+    </Font>
+    <Font Include="..\Assets\Fonts\SometypeMono-Medium.ttf">
+      <Filter>Assets\Fonts</Filter>
+    </Font>
+    <Font Include="..\Assets\Fonts\SometypeMono-MediumItalic.ttf">
+      <Filter>Assets\Fonts</Filter>
+    </Font>
+    <Font Include="..\Assets\Fonts\SometypeMono-Regular.ttf">
+      <Filter>Assets\Fonts</Filter>
+    </Font>
+  </ItemGroup>
+</Project>

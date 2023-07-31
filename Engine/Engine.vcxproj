@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.221121.5\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.221121.5\build\native\Microsoft.Windows.CppWinRT.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\vendor\DirectXTex\DDSTextureLoader\DDSTextureLoader11.h" />
+    <ClInclude Include="..\vendor\imgui\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="..\vendor\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="..\vendor\imgui\imconfig.h" />
+    <ClInclude Include="..\vendor\imgui\imgui.h" />
+    <ClInclude Include="..\vendor\imgui\imgui_internal.h" />
+    <ClInclude Include="..\vendor\imgui\imstb_rectpack.h" />
+    <ClInclude Include="..\vendor\imgui\imstb_textedit.h" />
+    <ClInclude Include="..\vendor\imgui\imstb_truetype.h" />
+    <ClInclude Include="..\vendor\imgui\misc\cpp\imgui_stdlib.h" />
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\async.h" />
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\async_logger-inl.h" />
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\async_logger.h" />
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\common-inl.h" />
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\common.h" />
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\logger-inl.h" />
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\logger.h" />
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\pattern_formatter-inl.h" />
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\pattern_formatter.h" />
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\spdlog-inl.h" />
+    <ClInclude Include="..\vendor\spdlog\include\spdlog\spdlog.h" />
+    <ClInclude Include="src\Core\Application.h" />
+    <ClInclude Include="src\Core\CommonDefinitions.h" />
+    <ClInclude Include="src\Core\Event.h" />
+    <ClInclude Include="src\Core\EventBus.h" />
+    <ClInclude Include="src\Core\FileSystem.h" />
+    <ClInclude Include="src\Core\Input.h" />
+    <ClInclude Include="src\Core\InputEvent.h" />
+    <ClInclude Include="src\Core\Keycode.h" />
+    <ClInclude Include="src\Core\Logger.h" />
+    <ClInclude Include="src\Core\Window.h" />
+    <ClInclude Include="src\Core\WindowEvent.h" />
+    <ClInclude Include="src\Editor\Editor.h" />
+    <ClInclude Include="src\Editor\EditorEvent.h" />
+    <ClInclude Include="src\Editor\ResourcePanel.h" />
+    <ClInclude Include="src\Editor\SceneInspector.h" />
+    <ClInclude Include="src\Engi.h" />
+    <ClInclude Include="src\Entry.h" />
+    <ClInclude Include="src\GFX\Definitions.h" />
+    <ClInclude Include="src\GFX\DX11\D3D11_API.h" />
+    <ClInclude Include="src\GFX\DX11\D3D11_Buffer.h" />
+    <ClInclude Include="src\GFX\DX11\D3D11_Descriptor.h" />
+    <ClInclude Include="src\GFX\DX11\D3D11_Sampler.h" />
+    <ClInclude Include="src\GFX\DX11\D3D11_InputLayout.h" />
+    <ClInclude Include="src\GFX\DX11\D3D11_PipelineState.h" />
+    <ClInclude Include="src\GFX\DX11\D3D11_Swapchain.h" />
+    <ClInclude Include="src\GFX\DX11\D3D11_Texture.h" />
+    <ClInclude Include="src\GFX\DX11\D3D11_Utility.h" />
+    <ClInclude Include="src\GFX\DX11\D3D11_Shader.h" />
+    <ClInclude Include="src\GFX\DX11\D3D11_Device.h" />
+    <ClInclude Include="src\GFX\DX11\DX11_ImGui.h" />
+    <ClInclude Include="src\GFX\GPU.h" />
+    <ClInclude Include="src\GFX\GPUBuffer.h" />
+    <ClInclude Include="src\GFX\GPUDescriptor.h" />
+    <ClInclude Include="src\GFX\GPUDevice.h" />
+    <ClInclude Include="src\GFX\GPUInputLayout.h" />
+    <ClInclude Include="src\GFX\GPUPipelineState.h" />
+    <ClInclude Include="src\GFX\GPUResource.h" />
+    <ClInclude Include="src\GFX\GPUSampler.h" />
+    <ClInclude Include="src\GFX\GPUShader.h" />
+    <ClInclude Include="src\GFX\GPUSwapchain.h" />
+    <ClInclude Include="src\GFX\GPUTexture.h" />
+    <ClInclude Include="src\GFX\GPUResourceAllocator.h" />
+    <ClInclude Include="src\GFX\ImGui.h" />
+    <ClInclude Include="src\GFX\WinAPI.h" />
+    <ClInclude Include="src\GFX\WinAPIDef.h" />
+    <ClInclude Include="src\GFX\WinAPIUndef.h" />
+    <ClInclude Include="src\Math\AABB.h" />
+    <ClInclude Include="src\Math\Mat4x4.h" />
+    <ClInclude Include="src\Math\Math.h" />
+    <ClInclude Include="src\Math\Numeric.h" />
+    <ClInclude Include="src\Math\Vec2.h" />
+    <ClInclude Include="src\Math\Vec3.h" />
+    <ClInclude Include="src\Math\Vec4.h" />
+    <ClInclude Include="src\Renderer\AssimpUtils.h" />
+    <ClInclude Include="src\Renderer\ConstantBuffer.h" />
+    <ClInclude Include="src\Renderer\ModelLoader.h" />
+    <ClInclude Include="src\Renderer\ImmutableBuffer.h" />
+    <ClInclude Include="src\Renderer\IndexBuffer.h" />
+    <ClInclude Include="src\Renderer\InstanceData.h" />
+    <ClInclude Include="src\Renderer\LongLivedBuffer.h" />
+    <ClInclude Include="src\Renderer\Material.h" />
+    <ClInclude Include="src\Renderer\MaterialInstance.h" />
+    <ClInclude Include="src\Renderer\MaterialRegistry.h" />
+    <ClInclude Include="src\Renderer\MeshManager.h" />
+    <ClInclude Include="src\Renderer\Model.h" />
+    <ClInclude Include="src\Renderer\RenderPass.h" />
+    <ClInclude Include="src\Renderer\Sampler.h" />
+    <ClInclude Include="src\World\DecalSystem\Decal.h" />
+    <ClInclude Include="src\World\DecalSystem\DecalManager.h" />
+    <ClInclude Include="src\World\LightSystem\DirectionalLight.h" />
+    <ClInclude Include="src\World\LightSystem\LightBase.h" />
+    <ClInclude Include="src\World\LightSystem\LightManager.h" />
+    <ClInclude Include="src\World\LightSystem\PointLight.h" />
+    <ClInclude Include="src\World\LightSystem\SpotLight.h" />
+    <ClInclude Include="src\World\ModelInstance.h" />
+    <ClInclude Include="src\World\ModelInstanceRegistry.h" />
+    <ClInclude Include="src\Renderer\ModelRegistry.h" />
+    <ClInclude Include="src\World\ParticleSystem\ParticleSystem.h" />
+    <ClInclude Include="src\Renderer\ReflectionCapture.h" />
+    <ClInclude Include="src\Renderer\Renderer.h" />
+    <ClInclude Include="src\Renderer\ShaderCache.h" />
+    <ClInclude Include="src\Renderer\ShaderCompiler.h" />
+    <ClInclude Include="src\Renderer\ShaderLibrary.h" />
+    <ClInclude Include="src\Renderer\ShaderProgram.h" />
+    <ClInclude Include="src\Renderer\Skybox.h" />
+    <ClInclude Include="src\Renderer\StaticMesh.h" />
+    <ClInclude Include="src\Renderer\StaticMeshInstance.h" />
+    <ClInclude Include="src\Renderer\StaticMeshTriangleOctree.h" />
+    <ClInclude Include="src\Renderer\DynamicBuffer.h" />
+    <ClInclude Include="src\Renderer\Buffer.h" />
+    <ClInclude Include="src\Renderer\Texture2D.h" />
+    <ClInclude Include="src\Renderer\TextureCube.h" />
+    <ClInclude Include="src\Renderer\TextureLibrary.h" />
+    <ClInclude Include="src\Renderer\PostProcessor.h" />
+    <ClInclude Include="src\Renderer\InstanceTable.h" />
+    <ClInclude Include="src\Renderer\TextureLoader.h" />
+    <ClInclude Include="src\Shaders\HLSL.h" />
+    <ClInclude Include="src\Shaders\LightCasters.hlsli" />
+    <ClInclude Include="src\Utility\ArrayView.h" />
+    <ClInclude Include="src\Utility\Memory.h" />
+    <ClInclude Include="src\Utility\Optional.h" />
+    <ClInclude Include="src\Utility\ParallelExecutor.h" />
+    <ClInclude Include="src\Utility\Random.h" />
+    <ClInclude Include="src\Utility\SolidVector.h" />
+    <ClInclude Include="src\Utility\Timer.h" />
+    <ClInclude Include="src\World\Camera.h" />
+    <ClInclude Include="src\World\CameraController.h" />
+    <ClInclude Include="src\World\CameraManager.h" />
+    <ClInclude Include="src\World\Flashlight.h" />
+    <ClInclude Include="src\World\InstanceDragger.h" />
+    <ClInclude Include="src\World\Scene.h" />
+    <ClInclude Include="src\World\SceneRenderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vendor\DirectXTex\DDSTextureLoader\DDSTextureLoader11.cpp" />
+    <ClCompile Include="..\vendor\imgui\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="..\vendor\imgui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="..\vendor\imgui\imgui.cpp" />
+    <ClCompile Include="..\vendor\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\vendor\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\vendor\imgui\imgui_tables.cpp" />
+    <ClCompile Include="..\vendor\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="..\vendor\imgui\misc\cpp\imgui_stdlib.cpp" />
+    <ClCompile Include="src\Core\Application.cpp" />
+    <ClCompile Include="src\Core\EventBus.cpp" />
+    <ClCompile Include="src\Core\FileSystem.cpp" />
+    <ClCompile Include="src\Core\Input.cpp" />
+    <ClCompile Include="src\Core\Logger.cpp" />
+    <ClCompile Include="src\Core\Window.cpp" />
+    <ClCompile Include="src\Editor\Editor.cpp" />
+    <ClCompile Include="src\Editor\ResourcePanel.cpp" />
+    <ClCompile Include="src\Editor\SceneInspector.cpp" />
+    <ClCompile Include="src\GFX\DX11\D3D11_Buffer.cpp" />
+    <ClCompile Include="src\GFX\DX11\D3D11_Descriptor.cpp" />
+    <ClCompile Include="src\GFX\DX11\D3D11_InputLayout.cpp" />
+    <ClCompile Include="src\GFX\DX11\D3D11_PipelineState.cpp" />
+    <ClCompile Include="src\GFX\DX11\D3D11_Sampler.cpp" />
+    <ClCompile Include="src\GFX\DX11\D3D11_Swapchain.cpp" />
+    <ClCompile Include="src\GFX\DX11\D3D11_Texture.cpp" />
+    <ClCompile Include="src\GFX\DX11\D3D11_Utility.cpp" />
+    <ClCompile Include="src\GFX\DX11\D3D11_Shader.cpp" />
+    <ClCompile Include="src\GFX\DX11\D3D11_Device.cpp" />
+    <ClCompile Include="src\GFX\DX11\DX11_ImGui.cpp" />
+    <ClCompile Include="src\GFX\GPU.cpp" />
+    <ClCompile Include="src\GFX\GPUResourceAllocator.cpp" />
+    <ClCompile Include="src\Renderer\AssimpUtils.cpp" />
+    <ClCompile Include="src\Renderer\ConstantBuffer.cpp" />
+    <ClCompile Include="src\Renderer\ModelLoader.cpp" />
+    <ClCompile Include="src\Renderer\ImmutableBuffer.cpp" />
+    <ClCompile Include="src\Renderer\IndexBuffer.cpp" />
+    <ClCompile Include="src\Renderer\InstanceData.cpp" />
+    <ClCompile Include="src\Renderer\LongLivedBuffer.cpp" />
+    <ClCompile Include="src\Renderer\Material.cpp" />
+    <ClCompile Include="src\Renderer\MaterialInstance.cpp" />
+    <ClCompile Include="src\Renderer\MaterialRegistry.cpp" />
+    <ClCompile Include="src\Renderer\MeshManager.cpp" />
+    <ClCompile Include="src\Renderer\Model.cpp" />
+    <ClCompile Include="src\Renderer\RenderPass.cpp" />
+    <ClCompile Include="src\Renderer\Sampler.cpp" />
+    <ClCompile Include="src\World\DecalSystem\Decal.cpp" />
+    <ClCompile Include="src\World\DecalSystem\DecalManager.cpp" />
+    <ClCompile Include="src\World\LightSystem\DirectionalLight.cpp" />
+    <ClCompile Include="src\World\LightSystem\LightManager.cpp" />
+    <ClCompile Include="src\World\LightSystem\PointLight.cpp" />
+    <ClCompile Include="src\World\LightSystem\SpotLight.cpp" />
+    <ClCompile Include="src\World\ModelInstance.cpp" />
+    <ClCompile Include="src\World\ModelInstanceRegistry.cpp" />
+    <ClCompile Include="src\Renderer\ModelRegistry.cpp" />
+    <ClCompile Include="src\World\ParticleSystem\ParticleSystem.cpp" />
+    <ClCompile Include="src\Renderer\ReflectionCapture.cpp" />
+    <ClCompile Include="src\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Renderer\ShaderCache.cpp" />
+    <ClCompile Include="src\Renderer\ShaderCompiler.cpp" />
+    <ClCompile Include="src\Renderer\ShaderLibrary.cpp" />
+    <ClCompile Include="src\Renderer\ShaderProgram.cpp" />
+    <ClCompile Include="src\Renderer\Skybox.cpp" />
+    <ClCompile Include="src\Renderer\StaticMesh.cpp" />
+    <ClCompile Include="src\Renderer\StaticMeshInstance.cpp" />
+    <ClCompile Include="src\Renderer\StaticMeshTriangleOctree.cpp" />
+    <ClCompile Include="src\Renderer\DynamicBuffer.cpp" />
+    <ClCompile Include="src\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Renderer\Texture2D.cpp" />
+    <ClCompile Include="src\Renderer\TextureCube.cpp" />
+    <ClCompile Include="src\Renderer\TextureLibrary.cpp" />
+    <ClCompile Include="src\Renderer\PostProcessor.cpp" />
+    <ClCompile Include="src\Renderer\TextureLoader.cpp" />
+    <ClCompile Include="src\Utility\ParallelExecutor.cpp" />
+    <ClCompile Include="src\Utility\Random.cpp" />
+    <ClCompile Include="src\Utility\Timer.cpp" />
+    <ClCompile Include="src\World\Camera.cpp" />
+    <ClCompile Include="src\World\CameraController.cpp" />
+    <ClCompile Include="src\World\CameraManager.cpp" />
+    <ClCompile Include="src\World\Flashlight.cpp" />
+    <ClCompile Include="src\World\InstanceDragger.cpp" />
+    <ClCompile Include="src\World\Scene.cpp" />
+    <ClCompile Include="src\World\SceneRenderer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Assets\Models\Knight\Knight.fbx" />
+    <None Include="..\Assets\Models\Samurai\Samurai.fbx" />
+    <None Include="packages.config" />
+    <None Include="src\Math\AABB.inl" />
+    <None Include="src\Math\Mat4x4.inl" />
+    <None Include="src\Math\Math.inl" />
+    <None Include="src\Math\Vec2.inl" />
+    <None Include="src\Math\Vec3.inl" />
+    <None Include="src\Math\Vec4.inl" />
+    <None Include="src\Shaders\Common.hlsli" />
+    <None Include="src\Shaders\BRDF.hlsli" />
+    <None Include="src\Shaders\IBL.hlsli" />
+    <None Include="src\Shaders\Lighting.hlsli">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="src\Shaders\Postprocessor.hlsli">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="src\Shaders\TextureDefines.hlsli">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="src\Utility\SolidVector.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="src\Shaders\DebugDrawLine.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\FXAA.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Fxaa3_11.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\GBuffer_Decal.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Depthmap_TextureCube.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\GBuffer_Dissolution.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\GBuffer_Emissive.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\GBuffer_Hologram.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\GBuffer_Incineration.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\GBuffer_Opaque.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\IBL_Diffuse_Precompute.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\BufferDefines.hlsli">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Emissive.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\IBL_LUT_Precompute.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\IBL_Specular_Precompute.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Incineration_Particles.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\LayoutDefines.hlsli">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\PBR.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\PBR_Dissolution.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\SamplerDefines.hlsli">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Hologram.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\FractalNoise.hlsli">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\NormalColor.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\NormalVis.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\AlbedoColor.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Depthmap_Texture2D.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Skybox.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\Postprocessor.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="src\Shaders\SmokeEmitter.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Assets\Models\Knight\Textures\Cloak_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Cloak_Normal.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Cloak_Roughness.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Eyes_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Eyes_Normal.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Fur_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Fur_Normal.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Fur_Roughness.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Gloves_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Gloves_Metallic.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Gloves_Normal.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Gloves_Roughness.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Head_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Head_Normal.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Head_Roughness.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Helmet_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Helmet_Metallic.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Helmet_Normal.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Helmet_Roughness.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Pants_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Pants_Metallic.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Pants_Normal.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Pants_Roughness.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Skirt_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Skirt_Normal.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Skirt_Roughness.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Torso_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Torso_Metallic.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Torso_Normal.dds" />
+    <Image Include="..\Assets\Models\Knight\Textures\Torso_Roughness.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Decor_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Decor_Metallic.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Decor_Normal.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Decor_Roughness.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Eyes_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Eyes_Normal.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Hands_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Hands_Normal.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Hands_Roughness.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Head_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Head_Normal.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Head_Roughness.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Helmet_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Helmet_Metallic.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Helmet_Normal.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Helmet_Roughness.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Pants_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Pants_Metallic.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Pants_Normal.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Pants_Roughness.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Sword_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Sword_Metallic.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Sword_Normal.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Sword_Roughness.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Torso_BaseColor.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Torso_Metallic.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Torso_Normal.dds" />
+    <Image Include="..\Assets\Models\Samurai\Textures\Torso_Roughness.dds" />
+    <Image Include="..\Assets\Textures\Batlight_Mask.dds" />
+    <Image Include="..\Assets\Textures\Mip_Level_Vis.dds" />
+    <Image Include="..\Assets\Textures\Paint_Chipped_1K_albedo.dds" />
+    <Image Include="..\Assets\Textures\Skybox\grass_field.dds" />
+    <Image Include="..\Assets\Textures\Skybox\Interstellar_Skybox.dds" />
+    <Image Include="..\Assets\Textures\Skybox\lake_beach.dds" />
+    <Image Include="..\Assets\Textures\Skybox\mountains.dds" />
+    <Image Include="..\Assets\Textures\Skybox\night_street.dds" />
+    <Image Include="..\Assets\Textures\Skybox\Space_Skybox.dds" />
+    <Image Include="..\Assets\Textures\Spotlight_Mask.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\Assets\Fonts\SometypeMono-Bold.ttf" />
+    <Font Include="..\Assets\Fonts\SometypeMono-BoldItalic.ttf" />
+    <Font Include="..\Assets\Fonts\SometypeMono-Italic.ttf" />
+    <Font Include="..\Assets\Fonts\SometypeMono-Medium.ttf" />
+    <Font Include="..\Assets\Fonts\SometypeMono-MediumItalic.ttf" />
+    <Font Include="..\Assets\Fonts\SometypeMono-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\vendor\DirectXTex\DirectXTex\DirectXTex_Desktop_2022.vcxproj">
+      <Project>{371b9fa9-4c90-4ac6-a123-aced756d6c77}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{4b438fbf-b6b0-40fd-82ca-8c4918d15e33}</ProjectGuid>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)/src;$(SolutionDir)/vendor/assimp/include;$(SolutionDir)/vendor/imgui;$(SolutionDir)/vendor/DirectXTex/DirectXTex;$(SolutionDir)/vendor/DirectXTex/DDSTextureLoader;$(SolutionDir)/vendor/spdlog/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)vendor\assimp\lib\Debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>assimp-vc143-mtd.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)/src;$(SolutionDir)/vendor/assimp/include;$(SolutionDir)/vendor/imgui;$(SolutionDir)/vendor/DirectXTex/DirectXTex;$(SolutionDir)/vendor/DirectXTex/DDSTextureLoader;$(SolutionDir)/vendor/spdlog/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)vendor\assimp\lib\Release\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>assimp-vc143-mt.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\directxtk_uwp.2022.12.16.1\build\native\directxtk_uwp.targets" Condition="Exists('..\packages\directxtk_uwp.2022.12.16.1\build\native\directxtk_uwp.targets')" />
+    <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.221121.5\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.221121.5\build\native\Microsoft.Windows.CppWinRT.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\directxtk_uwp.2022.12.16.1\build\native\directxtk_uwp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\directxtk_uwp.2022.12.16.1\build\native\directxtk_uwp.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.221121.5\build\native\Microsoft.Windows.CppWinRT.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.221121.5\build\native\Microsoft.Windows.CppWinRT.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.221121.5\build\native\Microsoft.Windows.CppWinRT.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.CppWinRT.2.0.221121.5\build\native\Microsoft.Windows.CppWinRT.targets'))" />
+  </Target>
+</Project>
