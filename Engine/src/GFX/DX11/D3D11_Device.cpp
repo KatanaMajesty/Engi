@@ -2,6 +2,7 @@
 
 #include <cstring>
 #include <vector>
+#include "Core/Logger.h"
 #include "Core/CommonDefinitions.h"
 #include "GFX/DX11/D3D11_Buffer.h"
 #include "GFX/DX11/D3D11_InputLayout.h"
@@ -488,8 +489,32 @@ namespace engi::gfx
     void D3D11Device::createD3D11Device()
     {
         ENGI_ASSERT(m_dxgiFactory.Get() && "DXGI Factory must be initialized before D3D11Device::createD3D11Device");
-        HRESULT hr = m_dxgiFactory->EnumAdapters(0, &m_d3dAdapter);
-        ENGI_ASSERT(SUCCEEDED(hr) && "Failed to query an adapter");
+
+        // FIX: Choosing poor Gpu Device sometimes
+        // We iterate through all available Gpu Devices and choose the one with the most amount of memory
+        SIZE_T dedicatedMemory = 0;
+        IDXGIAdapter* adapter = nullptr;
+        for (UINT i = 0; 
+            (HRESULT) m_dxgiFactory->EnumAdapters(i, &adapter) != DXGI_ERROR_NOT_FOUND; // Implicit cast between different types is fine...
+            ++i)
+        {
+            DXGI_ADAPTER_DESC adapterDesc;
+            HRESULT descResult = adapter->GetDesc(&adapterDesc);
+            ENGI_ASSERT(adapter && SUCCEEDED(descResult));
+
+            if (adapterDesc.DedicatedVideoMemory > dedicatedMemory)
+            {
+                dedicatedMemory = adapterDesc.DedicatedVideoMemory;
+                m_d3dAdapter = adapter;
+            }
+        }
+
+        ENGI_ASSERT(m_d3dAdapter && "Failed to query an adapter");
+        DXGI_ADAPTER_DESC adapterDesc;
+        m_d3dAdapter->GetDesc(&adapterDesc);
+
+        std::wstring wstr(adapterDesc.Description);
+        ENGI_LOG_INFO("Picked a Gpu Device {} for rendering", std::string(wstr.begin(), wstr.end()));
 
         D3D_FEATURE_LEVEL reqFeatures = D3D_FEATURE_LEVEL_11_1;
         D3D_FEATURE_LEVEL outFeatures = D3D_FEATURE_LEVEL_11_0;
@@ -499,7 +524,7 @@ namespace engi::gfx
 #endif
         ComPtr<ID3D11Device> device;
         ComPtr<ID3D11DeviceContext> devcon;
-        hr = D3D11CreateDevice(
+        HRESULT hr = D3D11CreateDevice(
             m_d3dAdapter,
             D3D_DRIVER_TYPE_UNKNOWN, // OS should select driver type
             nullptr,

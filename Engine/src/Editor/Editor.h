@@ -55,6 +55,7 @@ namespace engi
 		bool m_isSceneWindowOpened = false;
 		bool m_isResourceWindowOpened = false;
 		bool m_shouldRenderHelpWindow = true;
+		bool m_shouldDrawUI = true;
 		
 		bool m_hasQueriedInstanceIntersection = false;
 		uint32_t m_intersectedInstanceID = uint32_t(-1);

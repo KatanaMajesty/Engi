@@ -85,49 +85,51 @@ namespace engi
 
 		m_scene->onUpdate(timestep, io.isPressed(Keycode::N));
 
-		m_renderer->beginUIFrame();
+		if (m_shouldDrawUI)
 		{
-			drawHeader();
-			if (m_isResourceWindowOpened)
+			m_renderer->beginUIFrame();
 			{
-				if (ImGui::Begin("Resource Window", &m_isResourceWindowOpened))
-					m_resourcePanel->onUpdate();
-
-				ImGui::End();
-			}
-
-			if (m_isSceneWindowOpened)
-			{
-				if (ImGui::Begin("Scene Window", &m_isSceneWindowOpened))
+				drawHeader();
+				if (m_isResourceWindowOpened)
 				{
-					m_sceneInspector->OnUpdate();
+					if (ImGui::Begin("Resource Window", &m_isResourceWindowOpened))
+						m_resourcePanel->onUpdate();
+
+					ImGui::End();
 				}
-				ImGui::End();
-			}
 
-			if (s_showImGuiDemo)
-				ImGui::ShowDemoWindow(&s_showImGuiDemo);
-
-			if (m_shouldRenderHelpWindow)
-			{
-				uint32_t helpWindowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoInputs | ImGuiWindowFlags_NoNav | ImGuiWindowFlags_NoBackground;
-				ImGui::SetNextWindowPos(ImVec2(0.0f, m_headerHeight));
-				ImGui::SetNextWindowSize(ImVec2(m_width / 2.0f, m_height / 2.0f));
-				if (ImGui::Begin("##help_window", nullptr, helpWindowFlags))
+				if (m_isSceneWindowOpened)
 				{
-					ImGui::TextWrapped("Press 'ALT + LMB' to Select an Instance (It might seem a bit clanky, sry)\n"
-						"Select an \"empty\" space in order to remove instance selection if any\n\n"
-						"Press 'M' to spawn an instance\n"
-						"Press 'G' while cursor is on instance to spawn a decal on it\n"
-						"Press 'Z' while cursor is on instance to remove it from the scene\n"
-						"Hold 'N' in order to perform debug render pass\n\n"
-						"Press 'H' to toggle this text");
+					if (ImGui::Begin("Scene Window", &m_isSceneWindowOpened))
+					{
+						m_sceneInspector->OnUpdate();
+					}
+					ImGui::End();
 				}
-				ImGui::End();
+
+				if (s_showImGuiDemo)
+					ImGui::ShowDemoWindow(&s_showImGuiDemo);
+
+				if (m_shouldRenderHelpWindow)
+				{
+					uint32_t helpWindowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoInputs | ImGuiWindowFlags_NoNav | ImGuiWindowFlags_NoBackground;
+					ImGui::SetNextWindowPos(ImVec2(0.0f, m_headerHeight));
+					ImGui::SetNextWindowSize(ImVec2(m_width / 2.0f, m_height / 2.0f));
+					if (ImGui::Begin("##help_window", nullptr, helpWindowFlags))
+					{
+						ImGui::TextWrapped("Press 'ALT + LMB' to Select an Instance (It might seem a bit clanky, sry)\n"
+							"Select an \"empty\" space in order to remove instance selection if any\n\n"
+							"Press 'M' to spawn an instance\n"
+							"Press 'G' while cursor is on instance to spawn a decal on it\n"
+							"Press 'Z' while cursor is on instance to remove it from the scene\n"
+							"Hold 'N' in order to perform debug render pass\n\n"
+							"Press 'H' to toggle this text (Or press 'F1' to toggle all UI)");
+					}
+					ImGui::End();
+				}
 			}
-			
+			m_renderer->endUIFrame();
 		}
-		m_renderer->endUIFrame();
 	}
 
 	void Editor::onResize(const EvWindowResized& ev) noexcept
@@ -160,6 +162,11 @@ namespace engi
 		if (ev.keycode == Keycode::Z)
 		{
 			this->removeInstanceUnderCursor();
+		}
+
+		if (ev.keycode == Keycode::F1)
+		{
+			m_shouldDrawUI = !m_shouldDrawUI;
 		}
 	}
 
