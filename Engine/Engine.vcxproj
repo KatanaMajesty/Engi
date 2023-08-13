@@ -633,9 +633,6 @@
     <ProjectReference Include="..\vendor\Assimp\code\assimp.vcxproj">
       <Project>{5c5cbc53-632e-313a-b581-456a5cbfea5c}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\vendor\Assimp\contrib\zlib\zlibstatic.vcxproj">
-      <Project>{e09142e7-ea01-3426-abc9-c12bcc405ae5}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\vendor\DirectXTex\DirectXTex\DirectXTex_Desktop_2022.vcxproj">
       <Project>{371b9fa9-4c90-4ac6-a123-aced756d6c77}</Project>
     </ProjectReference>
