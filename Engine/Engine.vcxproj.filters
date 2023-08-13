@@ -91,6 +91,9 @@
     <Filter Include="World\DecalSystem">
       <UniqueIdentifier>{c3954325-d21a-4a37-9f8d-932272540de8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vendor\Assimp">
+      <UniqueIdentifier>{a8227451-f311-4cd9-a65d-290545b3d085}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Utility\Timer.h">

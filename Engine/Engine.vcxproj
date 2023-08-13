@@ -630,6 +630,12 @@
     <Font Include="..\Assets\Fonts\SometypeMono-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\vendor\Assimp\code\assimp.vcxproj">
+      <Project>{5c5cbc53-632e-313a-b581-456a5cbfea5c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\vendor\Assimp\contrib\zlib\zlibstatic.vcxproj">
+      <Project>{e09142e7-ea01-3426-abc9-c12bcc405ae5}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\vendor\DirectXTex\DirectXTex\DirectXTex_Desktop_2022.vcxproj">
       <Project>{371b9fa9-4c90-4ac6-a123-aced756d6c77}</Project>
     </ProjectReference>
@@ -729,15 +735,16 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)/src;$(SolutionDir)/vendor/assimp/include;$(SolutionDir)/vendor/imgui;$(SolutionDir)/vendor/DirectXTex/DirectXTex;$(SolutionDir)/vendor/DirectXTex/DDSTextureLoader;$(SolutionDir)/vendor/spdlog/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/src;$(SolutionDir)/vendor/Assimp/include;$(SolutionDir)/vendor/imgui;$(SolutionDir)/vendor/DirectXTex/DirectXTex;$(SolutionDir)/vendor/DirectXTex/DDSTextureLoader;$(SolutionDir)/vendor/spdlog/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)vendor\assimp\lib\Debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>assimp-vc143-mtd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -749,7 +756,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)/src;$(SolutionDir)/vendor/assimp/include;$(SolutionDir)/vendor/imgui;$(SolutionDir)/vendor/DirectXTex/DirectXTex;$(SolutionDir)/vendor/DirectXTex/DDSTextureLoader;$(SolutionDir)/vendor/spdlog/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/src;$(SolutionDir)/vendor/Assimp/include;$(SolutionDir)/vendor/imgui;$(SolutionDir)/vendor/DirectXTex/DirectXTex;$(SolutionDir)/vendor/DirectXTex/DDSTextureLoader;$(SolutionDir)/vendor/spdlog/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -758,8 +765,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)vendor\assimp\lib\Release\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>assimp-vc143-mt.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
