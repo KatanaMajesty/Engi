@@ -13,9 +13,9 @@ My first D3D11 Engine I developed as a part of Dragons Lake 3D Rendering Interns
 - [x] Optimal Instanced Rendering of opaque meshes
 - [x] HDR with ACES Tonemapping
 - [x] FXAA
-- [ ] Editor UI
+- [x] Editor UI
 - [x] CPU-sided Smoke Particles
-- [ ] GPU-sided Incineration Particles
+- [x] GPU-sided Incineration Particles
 - [ ] Physically Based Bloom
 - [ ] TAA
 - [ ] HLSL Shader caching
